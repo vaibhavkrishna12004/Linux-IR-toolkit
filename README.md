@@ -102,16 +102,6 @@ Use Cases
 
 ---
 
-Project Structure
-
-Linux-IR-toolkit/
-├── ir_toolkit.sh
-├── README.md
-├── CHANGELOG.md
-├── .gitignore
-└── sample_auth.log
-
----
 
 Roadmap
 
