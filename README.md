@@ -1,36 +1,124 @@
-# Linux Log Analyzer
+Linux IR Toolkit
 
-A Bash-based Linux security monitoring tool that analyzes Linux system logs and summarizes privileged command activity.
+A Bash-based Linux Incident Response Toolkit designed to assist security analysts, SOC analysts, blue teams, and system administrators in performing rapid host triage and forensic data collection on Linux systems.
 
-## Features
+Features
 
-- Counts sudo command executions
-- Displays top 10 most common sudo commands
-- Shows recent privileged activity
-- Uses journald log analysis
+Host Information
 
-## Usage
+- Hostname collection
+- Current user identification
+- Kernel version detection
+- System uptime
+- Current date and time
 
-chmod +x log_analyzer.sh
-./log_analyzer.sh
+Privilege Findings
 
-## Sample Output
+- Total sudo command count
+- Top 10 most frequently executed sudo commands
+- Detection of account modification activity
+- Recent privileged account changes
 
+Authentication Findings
 
-```text
-=================================
-      SUDO ACTIVITY REPORT
-=================================
+- Failed login attempt analysis
+- Recent failed login events
+- Recent successful login activity
 
-Total Sudo Commands: 307
+Network Findings
 
-Top 10 Most Common Sudo Commands:
+- Active listening ports
+- Current network connections
+- Established sessions overview
 
-25 /usr/bin/apt update
-16 /usr/sbin/reboot
-11 /usr/bin/journalctl
+User Findings
 
-Recent Sudo Commands:
+- Interactive shell user enumeration
+- Local user review
 
-/usr/bin/journalctl
-/usr/bin/journalctl
+Sudo User Enumeration
+
+- Identification of users with sudo privileges
+
+Process Analysis
+
+- Top memory-consuming processes
+- Running process inspection
+
+World-Writable File Detection
+
+- Discovery of potentially risky writable files
+
+Automated Reporting
+
+- Generates timestamped incident response reports
+- Reports stored locally in the "reports/" directory
+- Generated reports excluded from Git tracking via ".gitignore"
+
+---
+
+Installation
+
+Clone the repository:
+
+git clone https://github.com/vaibhavkrishna12004/Linux-IR-toolkit.git
+cd Linux-IR-toolkit
+
+Make the script executable:
+
+chmod +x ir_toolkit.sh
+
+Run the toolkit:
+
+./ir_toolkit.sh
+
+---
+
+Sample Output
+
+The toolkit provides structured output divided into:
+
+- Host Information
+- Privilege Findings
+- Authentication Findings
+- Network Findings
+- User Findings
+- Sudo Users
+- Process Findings
+- World-Writable Files
+- Overall Assessment
+
+---
+
+Use Cases
+
+- Linux Incident Response
+- Security Auditing
+- System Triage
+- SOC Analyst Training
+- Blue Team Exercises
+- Cybersecurity Portfolio Projects
+- Linux Security Monitoring
+
+---
+
+Project Structure
+
+Linux-IR-toolkit/
+├── ir_toolkit.sh
+├── README.md
+├── CHANGELOG.md
+├── .gitignore
+└── sample_auth.log
+
+---
+
+Roadmap
+
+v3.0 Goals
+
+- User attribution for privileged commands
+- Suspicious process detection
+- Persistence mechanism checks
+- Additional log analysis capabilities
+- Improved reporting
