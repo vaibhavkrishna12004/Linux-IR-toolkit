@@ -16,6 +16,8 @@ chmod +x log_analyzer.sh
 
 ## Sample Output
 
+
+```text
 =================================
       SUDO ACTIVITY REPORT
 =================================
@@ -23,6 +25,12 @@ chmod +x log_analyzer.sh
 Total Sudo Commands: 307
 
 Top 10 Most Common Sudo Commands:
+
 25 /usr/bin/apt update
 16 /usr/sbin/reboot
-...
+11 /usr/bin/journalctl
+
+Recent Sudo Commands:
+
+/usr/bin/journalctl
+/usr/bin/journalctl
